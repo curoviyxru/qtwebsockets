@@ -118,10 +118,10 @@ public:
     void setAdditonalQueryString(QList<QPair<QString, QString> >);
     void setAddtionalHeaders(QList<QPair<QString, QString> > );
 
-    qint64 write(const char *message) Q_REQUIRED_RESULT;
-    qint64 write(const char *message, qint64 maxSize) Q_REQUIRED_RESULT;
-    qint64 write(const QString &message) Q_REQUIRED_RESULT;
-    qint64 write(const QByteArray &data) Q_REQUIRED_RESULT;
+    qint64 write(const char *message);//Q_REQUIRED_RESULT;
+    qint64 write(const char *message, qint64 maxSize);//Q_REQUIRED_RESULT;
+    qint64 write(const QString &message);//Q_REQUIRED_RESULT;
+    qint64 write(const QByteArray &data);//Q_REQUIRED_RESULT;
 
 #ifndef QT_NO_SSL
     void ignoreSslErrors(const QList<QSslError> &errors);

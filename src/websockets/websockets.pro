@@ -8,6 +8,7 @@ TEMPLATE = lib
 DEFINES += QTWEBSOCKETS_LIBRARY
 
 CONFIG += sharedlib
+#CONFIG += staticlib
 
 PUBLIC_HEADERS += \
     $$PWD/qwebsocket.h \

@@ -44,6 +44,7 @@
 
 #include <QtCore/qglobal.h>
 #include "qwebsocketprotocol.h"
+#include "qwebsocket4.h"
 
 QT_BEGIN_NAMESPACE
 

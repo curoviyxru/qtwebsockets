@@ -48,7 +48,7 @@ contains(QT_CONFIG, openssl) | contains(QT_CONFIG, openssl-linked) {
     HEADERS += $$PWD/qsslserver_p.h
 }
 
-target.path = $$[QT_INSTALL_PREFIX]/lib
+target.path = $$PWD/lib
 headers.files = $$PUBLIC_HEADERS
-headers.path = $$[QT_INSTALL_PREFIX]/include/QtWebSockets
+headers.path = $$PWD/include/QtWebSockets
 INSTALLS += target headers

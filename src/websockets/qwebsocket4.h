@@ -8,6 +8,12 @@
     #define Q_NULLPTR 0
     typedef size_t size_type;
     typedef qint32 qintptr;
+    #ifndef Q_UNLIKELY
+        #define Q_UNLIKELY(expr) expr
+    #endif
+    #ifndef Q_LIKELY
+        #define Q_LIKELY(expr) expr
+    #endif
 
     #ifndef QStringLiteral
         #define QStringLiteral(str) QString::fromLocal8Bit(str)

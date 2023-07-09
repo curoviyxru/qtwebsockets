@@ -54,6 +54,7 @@
 #include <QtCore/QStringBuilder>   //for more efficient string concatenation
 
 #include <functional>   //for std::greater
+#include <algorithm>    //for std::sort
 
 #if QT_VERSION <= QT_VERSION_CHECK(5, 0, 2)
     #include "qwebsocket4.h"
@@ -218,7 +219,7 @@ QTextStream &QWebSocketHandshakeResponse::writeToStream(QTextStream &textStream)
     if (Q_LIKELY(!m_response.isEmpty()))
         textStream << m_response.toLatin1().constData();
     else
-        textStream.setStatus(QTextStream::WriteFailed);
+        textStream.setStatus(QTextStream::ReadCorruptData);
     return textStream;
 }
 

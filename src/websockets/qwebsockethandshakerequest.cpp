@@ -49,6 +49,7 @@
 #include <QtCore/QList>
 #include <QtCore/QStringList>
 #include <functional>   //for std::greater
+#include <algorithm>    //for std::sort
 
 #if QT_VERSION <= QT_VERSION_CHECK(5, 0, 2)
     #include "qwebsocket4.h"

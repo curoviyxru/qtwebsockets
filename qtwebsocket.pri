@@ -1,14 +1,6 @@
-TARGET = QtWebSockets
-
 QT += core network
-QT -= gui
-
-TEMPLATE = lib
 
 DEFINES += QTWEBSOCKETS_LIBRARY
-
-CONFIG += sharedlib
-#CONFIG += staticlib
 
 PUBLIC_HEADERS += \
     $$PWD/qwebsocket.h \
@@ -43,12 +35,5 @@ SOURCES += \
     $$PWD/qwebsocketcorsauthenticator.cpp \
     $$PWD/qwebsocketframe.cpp
 
-contains(QT_CONFIG, openssl) | contains(QT_CONFIG, openssl-linked) {
-    SOURCES += $$PWD/qsslserver.cpp
-    HEADERS += $$PWD/qsslserver_p.h
-}
-
-target.path = $$PWD/lib
-headers.files = $$PUBLIC_HEADERS
-headers.path = $$PWD/include/QtWebSockets
-INSTALLS += target headers
+SOURCES += $$PWD/qsslserver.cpp
+HEADERS += $$PWD/qsslserver_p.h
